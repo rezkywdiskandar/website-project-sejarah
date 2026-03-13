@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Galeri Bukti: Arsip foto, peta kuno, dan artefak sejarah kolonialisme di Nusantara.">
+    <title>Galeri Bukti — Nusantara Archive</title>
+    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/components.css">
+    <link rel="stylesheet" href="/css/pages/galeri.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container">
+            <a href="/" class="navbar-brand">
+                <span class="brand-icon">⚓</span>
+                <div>
+                    <span class="brand-text">Nusantara Archive</span>
+                    <span class="brand-year">1511 — 1942</span>
+                </div>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="/">Home</a>
+                <a href="/era-3g.html">Era 3G</a>
+                <a href="/voc.html">Masa VOC</a>
+                <a href="/kolonial.html">Kolonial</a>
+                <a href="/galeri.html" class="active">Galeri</a>
+                <a href="/tim.html">Tim Kami</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <h1>Arsip &amp; Bukti Sejarah</h1>
+        <p class="subtitle">Koleksi visual dari era kolonialisme Nusantara</p>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="section gallery-section">
+        <div class="container">
+            <!-- Filter Tabs -->
+            <div class="filter-tabs reveal" id="filterTabs">
+                <button class="filter-tab active" data-filter="all">Semua</button>
+                <button class="filter-tab" data-filter="foto">Foto</button>
+                <button class="filter-tab" data-filter="peta">Peta</button>
+                <button class="filter-tab" data-filter="artefak">Artefak</button>
+            </div>
+
+            <!-- Masonry Grid -->
+            <div class="masonry-grid reveal" id="galleryGrid">
+                <div class="masonry-item" data-category="foto" onclick="openLightbox(0)">
+                    <img src="/assets/images/hero-bg.png" alt="Kedatangan kapal Portugis di Nusantara">
+                    <div class="item-overlay">
+                        <span class="zoom-icon">🔍</span>
+                        <h4>Kedatangan Portugis</h4>
+                        <p>Armada kapal Portugis berlayar ke Nusantara, abad ke-16</p>
+                    </div>
+                </div>
+
+                <div class="masonry-item" data-category="foto" onclick="openLightbox(1)">
+                    <img src="/assets/images/spice-trade.png" alt="Perdagangan rempah di pasar tradisional">
+                    <div class="item-overlay">
+                        <span class="zoom-icon">🔍</span>
+                        <h4>Pasar Rempah</h4>
+                        <p>Aktivitas perdagangan rempah-rempah di pelabuhan Nusantara</p>
+                    </div>
+                </div>
+
+                <div class="masonry-item" data-category="foto" onclick="openLightbox(2)">
+                    <img src="/assets/images/voc-fortress.png" alt="Benteng VOC di Indonesia">
+                    <div class="item-overlay">
+                        <span class="zoom-icon">🔍</span>
+                        <h4>Benteng VOC</h4>
+                        <p>Benteng pertahanan VOC dengan bendera perusahaan</p>
+                    </div>
+                </div>
+
+                <div class="masonry-item" data-category="peta" onclick="openLightbox(3)">
+                    <img src="/assets/images/old-map.png" alt="Peta kuno Nusantara abad ke-17">
+                    <div class="item-overlay">
+                        <span class="zoom-icon">🔍</span>
+                        <h4>Peta Kuno Nusantara</h4>
+                        <p>Peta kartografi Kepulauan Hindia Timur oleh kartografer Belanda, abad ke-17</p>
+                    </div>
+                </div>
+
+                <div class="masonry-item" data-category="artefak" onclick="openLightbox(4)">
+                    <img src="/assets/images/colonial-coins.png" alt="Koin VOC dari era kolonial">
+                    <div class="item-overlay">
+                        <span class="zoom-icon">🔍</span>
+                        <h4>Mata Uang VOC</h4>
+                        <p>Koin tembaga dan perak VOC dengan monogram khas, abad ke-18</p>
+                    </div>
+                </div>
+
+                <div class="masonry-item" data-category="foto" onclick="openLightbox(5)">
+                    <img src="/assets/images/batavia.png" alt="Kota tua Batavia">
+                    <div class="item-overlay">
+                        <span class="zoom-icon">🔍</span>
+                        <h4>Batavia</h4>
+                        <p>Kota Batavia (Jakarta) pada masa kolonial Belanda</p>
+                    </div>
+                </div>
+
+                <div class="masonry-item" data-category="foto" onclick="openLightbox(6)">
+                    <img src="/assets/images/plantation.png" alt="Perkebunan masa Tanam Paksa">
+                    <div class="item-overlay">
+                        <span class="zoom-icon">🔍</span>
+                        <h4>Perkebunan Tanam Paksa</h4>
+                        <p>Sistem Cultuurstelsel: Rakyat dipaksa menanam komoditas ekspor</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose" onclick="closeLightbox()">✕</button>
+        <button class="lightbox-nav prev" onclick="navigateLightbox(-1)">❮</button>
+        <button class="lightbox-nav next" onclick="navigateLightbox(1)">❯</button>
+        <div class="lightbox-inner">
+            <div class="lightbox-image-wrapper" id="lightboxImageWrapper">
+                <img id="lightboxImage" src="" alt="">
+                <div class="magnifier" id="magnifier"></div>
+            </div>
+            <div class="lightbox-caption">
+                <h3 id="lightboxTitle"></h3>
+                <p id="lightboxDesc"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="brand-name">⚓ Nusantara Archive</div>
+                    <p>Proyek edukasi interaktif tentang sejarah kolonialisme di Nusantara.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/era-3g.html">Era 3G</a></li>
+                        <li><a href="/voc.html">Masa VOC</a></li>
+                        <li><a href="/kolonial.html">Kolonial Belanda</a></li>
+                        <li><a href="/galeri.html">Galeri Bukti</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Sumber</h4>
+                    <ul>
+                        <li><a href="#">Tropenmuseum</a></li>
+                        <li><a href="#">ANRI</a></li>
+                        <li><a href="#">Leiden University</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Nusantara Archive — Proyek Sejarah Kelompok</span>
+                <span>Dibuat dengan ❤️ untuk pendidikan</span>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/js/main.js"></script>
+    <script>
+        // Gallery data
+        const galleryItems = [
+            { src: '/assets/images/hero-bg.png', title: 'Kedatangan Portugis', desc: 'Armada kapal Portugis tiba di pelabuhan Nusantara pada abad ke-16, membawa misi Gold, Glory, dan Gospel.' },
+            { src: '/assets/images/spice-trade.png', title: 'Pasar Rempah Nusantara', desc: 'Suasana pasar rempah-rempah tradisional di pelabuhan Nusantara. Pala, cengkeh, dan lada menjadi komoditas utama.' },
+            { src: '/assets/images/voc-fortress.png', title: 'Benteng VOC', desc: 'Benteng pertahanan VOC dilengkapi dengan meriam dan barak tentara. Bendera VOC berkibar sebagai simbol kekuasaan.' },
+            { src: '/assets/images/old-map.png', title: 'Peta Kuno Nusantara', desc: 'Peta kartografi Kepulauan Hindia Timur (Insulae Indiae Orientalis) karya kartografer Belanda, abad ke-17.' },
+            { src: '/assets/images/colonial-coins.png', title: 'Mata Uang VOC', desc: 'Koleksi koin tembaga dan perak VOC dari abad ke-18. Monogram VOC dengan mahkota menjadi simbol dominasi ekonomi.' },
+            { src: '/assets/images/batavia.png', title: 'Kota Batavia', desc: 'Kota Batavia (sekarang Jakarta) pada masa kolonial. Arsitektur Eropa bercampur dengan pemukiman tradisional.' },
+            { src: '/assets/images/plantation.png', title: 'Perkebunan Tanam Paksa', desc: 'Sistem Cultuurstelsel (1830-1870): Rakyat dipaksa menanam komoditas ekspor di lahan pertanian mereka untuk keuntungan Belanda.' }
+        ];
+
+        let currentIndex = 0;
+
+        // Filter functionality
+        document.querySelectorAll('.filter-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Update active tab
+                document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                const filter = tab.dataset.filter;
+                document.querySelectorAll('.masonry-item').forEach(item => {
+                    if (filter === 'all' || item.dataset.category === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Lightbox
+        function openLightbox(index) {
+            currentIndex = index;
+            const item = galleryItems[index];
+            const lightbox = document.getElementById('lightbox');
+            const img = document.getElementById('lightboxImage');
+
+            img.src = item.src;
+            img.alt = item.title;
+            document.getElementById('lightboxTitle').textContent = item.title;
+            document.getElementById('lightboxDesc').textContent = item.desc;
+            lightbox.classList.add('open');
+            document.body.style.overflow = 'hidden';
+
+            // Setup magnifier
+            setupMagnifier(item.src);
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        function navigateLightbox(dir) {
+            currentIndex = (currentIndex + dir + galleryItems.length) % galleryItems.length;
+            openLightbox(currentIndex);
+        }
+
+        // Close on escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') navigateLightbox(-1);
+            if (e.key === 'ArrowRight') navigateLightbox(1);
+        });
+
+        // Magnifier
+        function setupMagnifier(src) {
+            const wrapper = document.getElementById('lightboxImageWrapper');
+            const magnifier = document.getElementById('magnifier');
+            const img = document.getElementById('lightboxImage');
+
+            magnifier.style.backgroundImage = `url('${src}')`;
+
+            wrapper.addEventListener('mousemove', (e) => {
+                const rect = wrapper.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                // Only show magnifier within image bounds
+                if (x < 0 || y < 0 || x > rect.width || y > rect.height) {
+                    magnifier.classList.remove('active');
+                    return;
+                }
+
+                magnifier.classList.add('active');
+
+                const magSize = 150;
+                magnifier.style.left = (x - magSize / 2) + 'px';
+                magnifier.style.top = (y - magSize / 2) + 'px';
+
+                // Zoom factor
+                const zoom = 2.5;
+                const bgX = -(x * zoom - magSize / 2);
+                const bgY = -(y * zoom - magSize / 2);
+                magnifier.style.backgroundSize = `${rect.width * zoom}px ${rect.height * zoom}px`;
+                magnifier.style.backgroundPosition = `${bgX}px ${bgY}px`;
+            });
+
+            wrapper.addEventListener('mouseleave', () => {
+                magnifier.classList.remove('active');
+            });
+        }
+    </script>
+</body>
+
+</html>

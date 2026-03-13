@@ -1,0 +1,108 @@
+/* ============================================
+   NUSANTARA ARCHIVE — Design Tokens
+   ============================================ */
+
+:root {
+  /* --- Colors --- */
+  --color-parchment: #F5ECD7;
+  --color-parchment-dark: #E8D9B5;
+  --color-parchment-light: #FAF4E8;
+  --color-ink: #2C1810;
+  --color-ink-light: #5C3D2E;
+  --color-ink-muted: #7A6254;
+  --color-gold: #C9A84C;
+  --color-gold-light: #E8D48B;
+  --color-gold-dark: #9E7E2E;
+  --color-navy: #1B2838;
+  --color-navy-light: #2D4A5E;
+  --color-navy-dark: #0F1A24;
+  --color-blood: #8B1A1A;
+  --color-blood-light: #B03030;
+  --color-cream: #FDF8EF;
+  --color-white: #FFFFFF;
+  --color-overlay-dark: rgba(27, 40, 56, 0.85);
+  --color-overlay-light: rgba(245, 236, 215, 0.9);
+
+  /* --- Typography --- */
+  --font-heading: 'Playfair Display', 'Georgia', serif;
+  --font-body: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  --font-accent: 'IM Fell English', 'Georgia', serif;
+
+  --fs-hero: clamp(2.5rem, 6vw, 5rem);
+  --fs-h1: clamp(2rem, 4vw, 3.5rem);
+  --fs-h2: clamp(1.5rem, 3vw, 2.5rem);
+  --fs-h3: clamp(1.25rem, 2.5vw, 1.75rem);
+  --fs-h4: 1.25rem;
+  --fs-body: 1rem;
+  --fs-body-lg: 1.125rem;
+  --fs-small: 0.875rem;
+  --fs-caption: 0.75rem;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-black: 900;
+
+  --lh-tight: 1.2;
+  --lh-normal: 1.6;
+  --lh-relaxed: 1.8;
+
+  --ls-tight: -0.02em;
+  --ls-normal: 0;
+  --ls-wide: 0.05em;
+  --ls-wider: 0.1em;
+  --ls-widest: 0.2em;
+
+  /* --- Spacing --- */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+  --space-5xl: 8rem;
+
+  /* --- Layout --- */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1200px;
+  --container-max: 1400px;
+
+  /* --- Border Radius --- */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 50%;
+
+  /* --- Shadows --- */
+  --shadow-sm: 0 1px 3px rgba(44, 24, 16, 0.1);
+  --shadow-md: 0 4px 12px rgba(44, 24, 16, 0.12);
+  --shadow-lg: 0 8px 30px rgba(44, 24, 16, 0.15);
+  --shadow-xl: 0 12px 50px rgba(44, 24, 16, 0.2);
+  --shadow-gold: 0 4px 20px rgba(201, 168, 76, 0.3);
+  --shadow-inset: inset 0 2px 6px rgba(44, 24, 16, 0.08);
+
+  /* --- Transitions --- */
+  --ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+  --duration-slower: 800ms;
+
+  /* --- Z-Index --- */
+  --z-base: 1;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-navbar: 500;
+  --z-modal: 1000;
+  --z-tooltip: 1500;
+}

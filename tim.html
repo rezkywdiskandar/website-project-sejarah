@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tim Kami: Para Arsiparis Modern di balik proyek Nusantara Archive.">
+    <title>Tim Kami — Nusantara Archive</title>
+    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/components.css">
+    <link rel="stylesheet" href="/css/pages/tim.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container">
+            <a href="/" class="navbar-brand">
+                <span class="brand-icon">⚓</span>
+                <div>
+                    <span class="brand-text">Nusantara Archive</span>
+                    <span class="brand-year">1511 — 1942</span>
+                </div>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="/">Home</a>
+                <a href="/era-3g.html">Era 3G</a>
+                <a href="/voc.html">Masa VOC</a>
+                <a href="/kolonial.html">Kolonial</a>
+                <a href="/galeri.html">Galeri</a>
+                <a href="/tim.html" class="active">Tim Kami</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <h1>Para Arsiparis Modern</h1>
+        <p class="subtitle">Kenali tim di balik Nusantara Archive</p>
+    </section>
+
+    <!-- TEAM -->
+    <section class="section team-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>The Trio</h2>
+                <p>Tiga individu dengan peran unik, bersatu untuk melestarikan sejarah</p>
+            </div>
+
+            <div class="team-grid reveal">
+                <!-- Member 1: The Researcher -->
+                <div class="wanted-card">
+                    <div class="wanted-title">WANTED!</div>
+                    <div class="wanted-photo">
+                        <div
+                            style="width:100%;height:100%;background:linear-gradient(135deg,var(--color-navy),var(--color-navy-light));display:flex;align-items:center;justify-content:center;font-size:4rem;color:var(--color-gold);">
+                            <img src="assets/images/12511333.JPG">
+                        </div>
+                    </div>
+                    <div class="wanted-name">Rezky Widi Iskandar</div>
+                    <div class="wanted-quote typewriter"
+                        data-quote="Sejarah bukan sekadar masa lalu, ia adalah cermin untuk memahami masa kini.">
+                        Sejarah bukan sekadar masa lalu, ia adalah cermin untuk memahami masa kini.
+                    </div>
+                    <div class="wanted-reward">
+                        <span>🥉 "Tentang harapan masa depan." - perunggu</span>
+                    </div>
+                </div>
+
+                <!-- Member 2: The Designer -->
+                <div class="wanted-card">
+                    <div class="wanted-title">WANTED!</div>
+                    <div class="wanted-photo">
+                        <div
+                            style="width:100%;height:100%;background:linear-gradient(135deg,var(--color-gold-dark),var(--color-gold));display:flex;align-items:center;justify-content:center;font-size:4rem;color:var(--color-navy);">
+                            <img src="assets/images/12511423.JPG">
+                        </div>
+                    </div>
+
+                    <div class="wanted-name">Zhabir Naufal Dewantara</div>
+                    <div class="wanted-quote typewriter"
+                        data-quote="Desain yang baik bukan hanya soal estetika, tapi bagaimana menyampaikan cerita yang bermakna.">
+                        Desain yang baik bukan hanya soal estetika, tapi bagaimana menyampaikan cerita yang bermakna.
+                    </div>
+                    <div class="wanted-reward">
+                        <span>🥉 “Semoga ini abadi.” - Perunggu</span>
+                    </div>
+                </div>
+
+                <!-- Member 3: The Developer -->
+                <div class="wanted-card">
+                    <div class="wanted-title">WANTED!</div>
+                    <div class="wanted-photo">
+                        <div
+                            style="width:100%;height:100%;background:linear-gradient(135deg,var(--color-blood),var(--color-blood-light));display:flex;align-items:center;justify-content:center;font-size:4rem;color:var(--color-parchment);">
+                            <img src="assets/images/12510795.JPG">
+                        </div>
+                    </div>
+                    <div class="wanted-name">Adrian Herliansyah Ramadhan</div>
+                    <div class="wanted-quote typewriter"
+                        data-quote="Teknologi adalah jembatan antara masa lalu dan generasi masa depan.">
+                        Teknologi adalah jembatan antara masa lalu dan generasi masa depan.
+                    </div>
+                    <div class="wanted-reward">
+                        <span>🥉“Tentang masa yang tak kembali.” - Perunggu</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUIZ SECTION -->
+    <section class="section" style="background: var(--color-navy); color: var(--color-parchment);">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 style="color: var(--color-parchment);">Seberapa Paham Kamu Tentang VOC?</h2>
+                <p style="color: rgba(245, 236, 215, 0.7);">Uji pengetahuan sejarahmu dengan kuis singkat ini</p>
+            </div>
+
+            <div class="reveal" style="max-width:600px; margin:0 auto;" id="quizContainer">
+                <div id="quizContent">
+                    <!-- Quiz will be injected by JS -->
+                </div>
+                <div id="quizResult" style="display:none; text-align:center; padding: 2rem 0;">
+                    <div style="font-size:3rem; margin-bottom:1rem;" id="resultEmoji"></div>
+                    <h3 style="color:var(--color-gold); margin-bottom:0.5rem;" id="resultTitle"></h3>
+                    <p style="color: rgba(245,236,215,0.8);" id="resultMessage"></p>
+                    <button class="btn btn-primary" onclick="startQuiz()" style="margin-top:1.5rem;">Coba Lagi</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="brand-name">⚓ Nusantara Archive</div>
+                    <p>Proyek edukasi interaktif tentang sejarah kolonialisme di Nusantara.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/era-3g.html">Era 3G</a></li>
+                        <li><a href="/voc.html">Masa VOC</a></li>
+                        <li><a href="/kolonial.html">Kolonial Belanda</a></li>
+                        <li><a href="/galeri.html">Galeri Bukti</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Sumber</h4>
+                    <ul>
+                        <li><a href="#">Tropenmuseum</a></li>
+                        <li><a href="#">ANRI</a></li>
+                        <li><a href="#">Leiden University</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Nusantara Archive — Proyek Sejarah Kelompok</span>
+                <span>Dibuat dengan ❤️ untuk pendidikan</span>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/js/main.js"></script>
+    <script>
+        // Quiz
+        const questions = [
+            {
+                q: "Tahun berapa VOC didirikan?",
+                options: ["1498", "1511", "1602", "1619"],
+                answer: 2
+            },
+            {
+                q: "Apa kepanjangan VOC?",
+                options: [
+                    "Vereenigde Oost-Indische Compagnie",
+                    "Vereeniging Oost-Indische Commercie",
+                    "Verbond Oost-Indische Compagnie",
+                    "Verenigde Oostindische Compagnie"
+                ],
+                answer: 3
+            },
+            {
+                q: "Siapa Gubernur Jenderal yang mendirikan kota Batavia?",
+                options: [
+                    "Herman Willem Daendels",
+                    "Jan Pieterszoon Coen",
+                    "Thomas Stamford Raffles",
+                    "Johannes van den Bosch"
+                ],
+                answer: 1
+            },
+            {
+                q: "Apa yang dimaksud dengan 'Cultuurstelsel'?",
+                options: [
+                    "Sistem perbudakan",
+                    "Sistem Tanam Paksa",
+                    "Sistem kerja rodi",
+                    "Sistem pendidikan kolonial"
+                ],
+                answer: 1
+            },
+            {
+                q: "Perjanjian Bongaya (1667) memaksa kerajaan mana untuk menyerah?",
+                options: [
+                    "Kerajaan Mataram",
+                    "Kesultanan Ternate",
+                    "Kerajaan Gowa",
+                    "Kesultanan Demak"
+                ],
+                answer: 2
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+
+        function startQuiz() {
+            currentQuestion = 0;
+            score = 0;
+            document.getElementById('quizContent').style.display = 'block';
+            document.getElementById('quizResult').style.display = 'none';
+            showQuestion();
+        }
+
+        function showQuestion() {
+            const q = questions[currentQuestion];
+            const container = document.getElementById('quizContent');
+
+            let html = `
+        <div style="margin-bottom:1rem; font-size:0.8rem; color:var(--color-gold); text-transform:uppercase; letter-spacing:0.1em;">
+          Pertanyaan ${currentQuestion + 1} dari ${questions.length}
+        </div>
+        <h3 style="color:var(--color-parchment); margin-bottom:1.5rem; font-size:1.25rem;">${q.q}</h3>
+        <div style="display:flex; flex-direction:column; gap:0.75rem;">
+      `;
+
+            q.options.forEach((opt, i) => {
+                html += `
+          <button onclick="answerQuestion(${i})" 
+                  style="text-align:left; padding:1rem 1.25rem; background:rgba(245,236,215,0.05); 
+                         border:1px solid rgba(201,168,76,0.2); border-radius:8px; 
+                         color:var(--color-parchment); font-size:1rem; cursor:pointer;
+                         transition: all 0.2s ease; font-family:var(--font-body);"
+                  onmouseover="this.style.borderColor='var(--color-gold)'; this.style.background='rgba(201,168,76,0.1)'"
+                  onmouseout="this.style.borderColor='rgba(201,168,76,0.2)'; this.style.background='rgba(245,236,215,0.05)'">
+            <span style="color:var(--color-gold); font-weight:600; margin-right:0.75rem;">${String.fromCharCode(65 + i)}.</span>
+            ${opt}
+          </button>
+        `;
+            });
+
+            html += '</div>';
+
+            // Progress bar
+            const progress = ((currentQuestion) / questions.length) * 100;
+            html += `
+        <div style="margin-top:2rem; height:4px; background:rgba(201,168,76,0.15); border-radius:4px; overflow:hidden;">
+          <div style="width:${progress}%; height:100%; background:var(--color-gold); transition:width 0.5s ease; border-radius:4px;"></div>
+        </div>
+      `;
+
+            container.innerHTML = html;
+        }
+
+        function answerQuestion(index) {
+            if (index === questions[currentQuestion].answer) {
+                score++;
+            }
+
+            currentQuestion++;
+
+            if (currentQuestion < questions.length) {
+                showQuestion();
+            } else {
+                showResult();
+            }
+        }
+
+        function showResult() {
+            document.getElementById('quizContent').style.display = 'none';
+            const result = document.getElementById('quizResult');
+            result.style.display = 'block';
+
+            const percentage = (score / questions.length) * 100;
+            let emoji, title, message;
+
+            if (percentage >= 80) {
+                emoji = '🏆';
+                title = 'Luar Biasa! Kamu Sejarawan Sejati!';
+                message = `Kamu menjawab ${score} dari ${questions.length} pertanyaan dengan benar. Pengetahuan sejarahmu sangat mengesankan!`;
+            } else if (percentage >= 60) {
+                emoji = '👏';
+                title = 'Bagus! Hampir Sempurna!';
+                message = `Kamu menjawab ${score} dari ${questions.length} pertanyaan dengan benar. Terus pelajari sejarah ya!`;
+            } else if (percentage >= 40) {
+                emoji = '📚';
+                title = 'Lumayan, Tapi Bisa Lebih Baik!';
+                message = `Kamu menjawab ${score} dari ${questions.length} pertanyaan dengan benar. Coba baca materi di halaman lain terlebih dahulu.`;
+            } else {
+                emoji = '🤔';
+                title = 'Ayo Belajar Lagi!';
+                message = `Kamu menjawab ${score} dari ${questions.length} pertanyaan dengan benar. Jelajahi website ini untuk menambah pengetahuan!`;
+            }
+
+            document.getElementById('resultEmoji').textContent = emoji;
+            document.getElementById('resultTitle').textContent = title;
+            document.getElementById('resultMessage').textContent = message;
+        }
+
+        // Start quiz on page load
+        startQuiz();
+    </script>
+</body>
+
+</html>

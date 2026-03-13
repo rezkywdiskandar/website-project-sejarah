@@ -1,0 +1,311 @@
+/* ============================================
+   KOLONIAL BELANDA PAGE STYLES
+   ============================================ */
+
+/* ======= TRANSITION SECTION ======= */
+.transition-section {
+    background: var(--color-parchment);
+}
+
+.transition-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-4xl);
+    align-items: center;
+}
+
+.transition-text h2 {
+    margin-bottom: var(--space-lg);
+}
+
+.transition-text p {
+    color: var(--color-ink-light);
+    line-height: var(--lh-relaxed);
+}
+
+.transition-visual {
+    position: relative;
+}
+
+.transition-visual img {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+}
+
+/* ======= BEFORE-AFTER SLIDER ======= */
+.comparison-section {
+    background: var(--color-navy);
+    color: var(--color-parchment);
+}
+
+.comparison-section .section-header h2 {
+    color: var(--color-parchment);
+}
+
+.comparison-section .section-header p {
+    color: rgba(245, 236, 215, 0.7);
+}
+
+.comparison-container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+    aspect-ratio: 16/9;
+    cursor: ew-resize;
+    user-select: none;
+}
+
+.comparison-container .before-image,
+.comparison-container .after-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.comparison-container .before-wrapper {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    width: 50%;
+    z-index: 2;
+}
+
+.comparison-container .before-wrapper img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.comparison-slider-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 3px;
+    background: var(--color-gold);
+    z-index: 3;
+    transform: translateX(-50%);
+}
+
+.comparison-slider-handle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-full);
+    background: var(--color-gold);
+    color: var(--color-navy-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 4;
+    box-shadow: var(--shadow-lg);
+    font-size: 1.25rem;
+    font-weight: var(--fw-bold);
+}
+
+.comparison-labels {
+    position: absolute;
+    bottom: var(--space-lg);
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 var(--space-xl);
+    z-index: 5;
+    pointer-events: none;
+}
+
+.comparison-labels span {
+    background: rgba(27, 40, 56, 0.8);
+    color: var(--color-parchment);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-md);
+    font-size: var(--fs-small);
+    font-weight: var(--fw-semibold);
+    letter-spacing: var(--ls-wide);
+    text-transform: uppercase;
+}
+
+/* ======= FORCED LABOR SECTION ======= */
+.labor-section {
+    background: var(--color-parchment);
+}
+
+.labor-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.labor-card {
+    background: var(--color-cream);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all var(--duration-normal) var(--ease-default);
+}
+
+.labor-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.labor-card-header {
+    padding: var(--space-xl) var(--space-2xl);
+    background: var(--color-navy);
+    color: var(--color-parchment);
+}
+
+.labor-card-header .card-period {
+    font-family: var(--font-accent);
+    font-size: var(--fs-small);
+    color: var(--color-gold-light);
+    font-style: italic;
+}
+
+.labor-card-header h3 {
+    color: var(--color-gold);
+    margin-top: var(--space-sm);
+}
+
+.labor-card-body {
+    padding: var(--space-xl) var(--space-2xl);
+}
+
+.labor-card-body p {
+    color: var(--color-ink-light);
+    line-height: var(--lh-relaxed);
+}
+
+.labor-card-body .fact-highlight {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    background: rgba(139, 26, 26, 0.06);
+    border-left: 3px solid var(--color-blood);
+    padding: var(--space-md) var(--space-lg);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    margin-top: var(--space-lg);
+}
+
+.fact-highlight .fact-icon {
+    font-size: 1.5rem;
+}
+
+.fact-highlight .fact-text {
+    font-size: var(--fs-small);
+    color: var(--color-blood);
+    font-weight: var(--fw-semibold);
+    margin-bottom: 0;
+}
+
+/* ======= BAR CHART ======= */
+.chart-section {
+    background: linear-gradient(180deg, var(--color-parchment) 0%, var(--color-parchment-dark) 100%);
+}
+
+.bar-chart {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.bar-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+}
+
+.bar-item .bar-label {
+    min-width: 160px;
+    font-size: var(--fs-small);
+    font-weight: var(--fw-medium);
+    color: var(--color-ink);
+    text-align: right;
+}
+
+.bar-item .bar-track {
+    flex: 1;
+    height: 32px;
+    background: rgba(201, 168, 76, 0.1);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    position: relative;
+}
+
+.bar-item .bar-fill {
+    height: 100%;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: var(--space-md);
+    font-size: var(--fs-small);
+    font-weight: var(--fw-bold);
+    color: var(--color-parchment);
+    width: 0;
+    transition: width 1.5s var(--ease-out);
+}
+
+.bar-item .bar-fill.gold-bar {
+    background: linear-gradient(90deg, var(--color-gold-dark), var(--color-gold));
+}
+
+.bar-item .bar-fill.blood-bar {
+    background: linear-gradient(90deg, var(--color-blood), var(--color-blood-light));
+}
+
+.bar-item .bar-fill.navy-bar {
+    background: linear-gradient(90deg, var(--color-navy-dark), var(--color-navy));
+}
+
+.bar-item .bar-value {
+    min-width: 50px;
+    font-family: var(--font-heading);
+    font-size: var(--fs-body);
+    font-weight: var(--fw-bold);
+    color: var(--color-ink);
+}
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 768px) {
+    .transition-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .labor-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .bar-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-sm);
+    }
+
+    .bar-item .bar-label {
+        text-align: left;
+        min-width: auto;
+    }
+
+    .bar-item .bar-track {
+        width: 100%;
+    }
+}
